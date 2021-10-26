@@ -8,15 +8,15 @@ class App extends React.Component {
     this.state = { count: 0, count2: 0 }
   }
 
+
   handleClickUp = () => {
-    this.setState({ count: this.state.count + 1 })
-  }
-
-    // if ( 1 === 2) {
-    //   2 + 1
-    // }
-
-
+    if (this.state.count <= this.state.count2) {
+      this.setState({ count: this.state.count + 1 })
+    }  
+    if (this.state.count === this.state.count2) {
+      this.setState({ count2: this.state.count2 + 1 })
+    }
+  } 
 
   handleClickDown = () => {
     if (this.state.count > 0) {
@@ -24,30 +24,33 @@ class App extends React.Component {
     }
   }
 
-  handleChange = (event) => {
-    this.setState({ count: event.target.count })
-  }
 
+
+  
   // Counter 2
-
   handleClickUp2 = () => {
     this.setState({ count2: this.state.count2 + 1 })
   }
-
+  
   handleClickDown2 = () => {
     if (this.state.count2 > 0) {
       this.setState({ count2: this.state.count2 - 1 })
     }
+    if (this.state.count === this.state.count2 && this.state.count !== 0) {
+      this.setState({ count: this.state.count - 1 })
+    }
   }
-  //  if ( 2 === 1) {
-  //    2 - 1
-  //  }
+  
 
 
-  handleChange2 = (event2) => {
-    this.setState({ count2: event2.target.count2 })
+  //   handleChange = (event) => {
+  //     this.setState({ count: event.target.count })
+  //   }
+
+  // handleChange2 = (event2) => {
+  //   this.setState({ count2: event2.target.count2 })
     
-  }
+  // }
 
 
   render() {
