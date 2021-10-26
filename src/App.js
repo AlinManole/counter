@@ -1,12 +1,10 @@
 import React from "react";
  
-class App extends React.Component {
-	name = "John";
-
+class App extends React.Component{
   render() {
     return (
 
-				<p> Welcome to my amazing blog</p>
+				<p> Welcome to the jungle</p>
 		)
   };
 }
