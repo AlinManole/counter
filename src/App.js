@@ -42,17 +42,6 @@ class App extends React.Component {
   }
   
 
-
-  //   handleChange = (event) => {
-  //     this.setState({ count: event.target.count })
-  //   }
-
-  // handleChange2 = (event2) => {
-  //   this.setState({ count2: event2.target.count2 })
-    
-  // }
-
-
   render() {
     // console.log(this.state.count)
 
